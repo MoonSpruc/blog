@@ -45,16 +45,6 @@
 	&--color-3e3e {
 		color: #3e3e3e;
 	}
-
-	&--second {
-		font-family: var(--font-family-second);
-	}
-
-	&--hover {
-		@include hover {
-			text-decoration: underline;
-		}
-	}
 }
 
 .title {
@@ -72,6 +62,10 @@
 
 	&--36 {
 		font-size: var(--fz-36);
+	}
+
+	&--46 {
+		@include fluid('font-size', 46, 38);
 	}
 
 	&--500 {
@@ -93,16 +87,16 @@
 	&--color-black {
 		color: var(--color-black);
 	}
+}
 
-	&--second {
-		font-family: var(--font-family-second);
+.hover {
+	@include hover {
+		text-decoration: underline;
 	}
+}
 
-	&--hover {
-		@include hover {
-			text-decoration: underline;
-		}
-	}
+.font-family-second {
+	font-family: var(--font-family-second);
 }
 
 .image {
@@ -121,6 +115,12 @@
 	@include fluid('padding-top', 70, 50);
 	@include fluid('padding-bottom', 150, 25);
 
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
 	&__blog {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -129,30 +129,6 @@
 
 		@include mobile {
 			grid-template-columns: auto;
-		}
-	}
-
-	&__card {
-		&:not(:last-child) {
-			margin-bottom: rem(30);
-		}
-
-		.blog__card-title {
-			font-family: var(--font-family-second);
-			font-weight: 700;
-			@include fluid('font-size', 46, 36);
-			color: var(--color-black);
-		}
-
-		.blog__card-image {
-			border-radius: var(--border-radius-l);
-			overflow: hidden;
-			height: rem(278);
-			box-shadow: 0 rem(5) rem(10) 0 rgba(0, 0, 0, 0.5);
-
-			@media (max-width: em(599.98)) {
-				height: auto;
-			}
 		}
 	}
 }
@@ -243,8 +219,6 @@
 
 	&__posts {
 		&-title {
-			color: var(--color-black);
-
 			&:not(:last-child) {
 				margin-bottom: rem(27);
 
