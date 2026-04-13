@@ -65,7 +65,7 @@
 	}
 
 	&--46 {
-		@include fluid('font-size', 46, 38);
+		@include fluid('font-size', 46, 34);
 	}
 
 	&--500 {
@@ -109,18 +109,38 @@
 	&--20 {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
+
+			@include mobile-s {
+				margin-bottom: rem(15);
+			}
 		}
 	}
 
 	&--30 {
 		&:not(:last-child) {
 			margin-bottom: rem(30);
+
+			@include mobile {
+				margin-bottom: rem(20);
+			}
+
+			@include mobile-s {
+				margin-bottom: rem(10);
+			}
 		}
 	}
 
 	&--40 {
 		&:not(:last-child) {
 			margin-bottom: rem(40);
+
+			@include mobile {
+				margin-bottom: rem(30);
+			}
+
+			@include mobile-s {
+				margin-bottom: rem(20);
+			}
 		}
 	}
 }

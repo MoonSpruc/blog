@@ -4,6 +4,14 @@
 	padding-block: rem(35);
 	background-color: var(--color-light-gray);
 
+	@include mobile {
+		padding-block: rem(20);
+	}
+
+	@include mobile-s {
+		padding-block: rem(12);
+	}
+
 	&__container {
 		&-big {
 			text-align: center;
@@ -13,6 +21,10 @@
 	&__menu {
 		&:not(:last-child) {
 			margin-bottom: rem(26);
+
+			@include mobile-s {
+				margin-bottom: rem(16);
+			}
 		}
 
 		&-list {

@@ -13,6 +13,10 @@
 			p {
 				&:not(:last-child) {
 					margin-bottom: rem(20);
+
+					@include mobile-s {
+						margin-bottom: rem(10);
+					}
 				}
 			}
 		}
@@ -38,6 +42,11 @@
 			display: grid;
 			grid-template-columns: rem(250) 1fr;
 			column-gap: rem(35);
+
+			@include mobile {
+				grid-template-columns: auto;
+				row-gap: rem(20);
+			}
 		}
 
 		&-text {
