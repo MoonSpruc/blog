@@ -1,0 +1,39 @@
+@use 'helpers' as *;
+
+.hero {
+	@include fluid('padding-top', 120, 80);
+	@include fluid('padding-bottom', 150, 25);
+
+	&__content {
+		text-align: center;
+
+		&:not(:last-child) {
+			@include fluid('margin-bottom', 100, 50);
+		}
+
+		&-title {
+			font-family: var(--font-family-second);
+			font-weight: 900;
+			color: var(--color-dark-blue);
+			@include fluid('font-size', 48, 40);
+
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+
+		&-text {
+			color: var(--color-gray);
+		}
+	}
+	&__blog {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: rem(30);
+		@include fluid('column-gap', 80, 20);
+
+		@include mobile {
+			grid-template-columns: auto;
+		}
+	}
+}

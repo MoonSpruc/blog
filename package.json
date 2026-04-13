@@ -1,0 +1,17 @@
+{
+	"name": "template",
+	"version": "1.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "sass --watch .",
+		"server": "live-sever"
+	},
+	"devDependencies": {
+		"sass": "^1.98.0"
+	}
+}

@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.footer {
+	padding-block: rem(35);
+	background-color: var(--color-light-gray);
+
+	&__container {
+		&-big {
+			text-align: center;
+		}
+	}
+
+	&__menu {
+		&:not(:last-child) {
+			margin-bottom: rem(26);
+		}
+
+		&-list {
+			@include flex-center;
+			flex-wrap: wrap;
+			column-gap: rem(25);
+		}
+
+		&-link {
+			color: #544b44;
+
+			@include hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

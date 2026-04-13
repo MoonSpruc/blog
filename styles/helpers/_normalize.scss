@@ -1,0 +1,127 @@
+@use '../variables' as *;
+@use 'media' as *;
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	min-width: $minWidth + px;
+
+	// Убираем скачок интерфейса по горизонтале
+	// при появлении / исчезновении скроллбара
+	scrollbar-gutter: stable;
+}
+
+// Плавный скролл
+html,
+:has(:target) {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	color: var(--color-default);
+	line-height: 1.6;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+// Упрощаем работу с изображениями и видео
+img,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input,
+button,
+textarea {
+	font-size: inherit;
+	color: inherit;
+	font-family: $fontFamily;
+	background-color: transparent;
+	line-height: inherit;
+}
+
+input,
+textarea {
+	inline-size: 100%;
+}
+
+button,
+select,
+option {
+	cursor: pointer;
+}
+
+a,
+button,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+// Приводим к единому цвету svg-элементы
+[fill] {
+	fill: currentColor;
+}
+[stroke] {
+	stroke: currentColor;
+}
+
+// Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+svg * {
+	transition-property: fill, stroke;
+}
+
+// Удаляем все анимации и переходы для людей,
+// которые предпочитают их не использовать
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

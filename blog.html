@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/main.css" />
+		<script src="./scripts/main.js" type="module" defer></script>
+		<title>Blog</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header" data-js-header>
+				<div class="header__container-big">
+					<a href="/" class="header__logo logo" title="Home" aria-label="Home">
+						MoonSpruc
+					</a>
+					<nav class="header__menu">
+						<ul class="header__menu-list" data-js-nav>
+							<li class="header__menu-item">
+								<a href="blog.html" class="header__menu-link">Blog</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="/" class="header__menu-link">About</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="/" class="header__menu-link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- TODO: add title and connect with aria-labelledby section -->
+			<main>
+				<section class="hero-alt" aria-labelledby="hero-alt-title">
+					<div class="hero-alt__container-big">
+						<div class="hero-alt__blog">
+							<article class="blog-card">
+								<div class="blog-card__image image">
+									<a href="posts/post.html">
+										<img
+											src="assets/images/hero-image1.jpg"
+											alt="Image"
+											width="510"
+											height="278"
+											loading="lazy"
+										/>
+									</a>
+								</div>
+								<span class="blog-card__tag tag">Travel</span>
+								<h2 class="blog-card__title">
+									<a
+										href="posts/post.html"
+										class="title--24 title--700 title--color-black title--hover"
+									>
+										What Traveling Greece For 2 Weeks Taught Me About Life
+									</a>
+								</h2>
+								<div class="blog-card__body">
+									<time
+										datetime="2025-06-21"
+										class="blog-card__body-date text--14 text--second"
+									>
+										Jun 21, 2025
+									</time>
+									<div class="blog-card__body-read-time text--14 text--second">
+										• 11 min read
+									</div>
+								</div>
+								<div class="blog-card__text text--16">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Diam mollis lectus vitae nulla malesuada amet purus sed. A
+										condimentum tempus a egestas sodales diam cras.
+									</p>
+								</div>
+								<div class="blog-card__author">
+									<a href="/" class="blog-card__author-image">
+										<img
+											src="assets/images/hero-image1.jpg"
+											alt="Image"
+											width="42"
+											height="42"
+											loading="lazy"
+										/>
+									</a>
+									<a
+										href="/"
+										class="blog-card__author-name text--14 text--700 text--black text--second text--hover"
+									>
+										George Costanza
+									</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+				<section class="info" aria-labelledby="info-title">
+					<div class="info__container-big">
+						<div class="info__newsletter">
+							<h3
+								class="info__newsletter-title title--24 title--900 title--second"
+								id="info-title"
+							>
+								Subscribe To Our Newsletter
+							</h3>
+							<div class="info__newsletter-text text--18 text--500">
+								<p>
+									Get weekly food news, articles, and videos delivered to your
+									inbox.
+								</p>
+							</div>
+							<form action="#" method="post" class="info__newsletter-form">
+								<input
+									autocomplete="off"
+									type="text"
+									name="form-newsletter"
+									placeholder="Email"
+									class="info__newsletter-input input"
+								/>
+								<button type="submit" class="info__newsletter-button">
+									Sign Up
+								</button>
+							</form>
+						</div>
+						<div class="info__posts">
+							<h4 class="info__posts-title title--14 title--500">
+								POPULAR POSTS
+							</h4>
+							<ul class="info__posts-list">
+								<li class="info__posts-item">
+									<a
+										href="/"
+										class="info__posts-link text--14 text--black text--second"
+									>
+										How To Have Your Cake and Eat It Too: The Way of The Chicken
+										Man
+									</a>
+								</li>
+								<li class="info__posts-item">
+									<a
+										href="/"
+										class="info__posts-link text--14 text--black text--second"
+									>
+										My Grandma’s 30-year-old Recipe
+									</a>
+								</li>
+								<li class="info__posts-item">
+									<a
+										href="/"
+										class="info__posts-link text--14 text--black text--second"
+									>
+										What I learned about cooking from Ratatoulie
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<div class="footer__container-big">
+					<nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item">
+								<a href="/" class="footer__menu-link text--14 text--second">
+									About
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="/" class="footer__menu-link text--14 text--second">
+									Privacy Policy
+								</a>
+							</li>
+							<li class="footer__menu-item">
+								<a href="/" class="footer__menu-link text--14 text--second">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<p
+						class="footer__copy text--14 text--700 text--second text--color-3e3e"
+					>
+						Copyright © 2025 MoonSpruc Blog. All Rights Reserved.
+					</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

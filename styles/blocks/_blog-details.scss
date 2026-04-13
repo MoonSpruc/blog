@@ -1,0 +1,108 @@
+@use '../helpers' as *;
+
+.blog-details {
+	@include fluid('padding-top', 70, 50);
+	@include fluid('padding-bottom', 150, 25);
+
+	&__body {
+		&-wrapper {
+			margin-top: rem(30);
+		}
+
+		&-title {
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+
+			&-main {
+				&:not(:last-child) {
+					margin-bottom: rem(30);
+				}
+			}
+		}
+
+		&-text {
+			&:not(:last-child) {
+				margin-bottom: rem(40);
+			}
+
+			p {
+				&:not(:last-child) {
+					margin-bottom: rem(20);
+				}
+			}
+		}
+	}
+
+	&__other {
+		margin-top: rem(50);
+
+		&-title {
+			&-big {
+				&:not(:last-child) {
+					margin-bottom: rem(30);
+				}
+			}
+
+			&-small {
+				&:not(:last-child) {
+					margin-bottom: rem(8);
+				}
+
+				a {
+					@include hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		&-items {
+			display: grid;
+			row-gap: rem(30);
+		}
+
+		&-item {
+			display: grid;
+			grid-template-columns: rem(250) 1fr;
+			column-gap: rem(35);
+		}
+
+		&-text {
+			color: #4f4f4f;
+		}
+	}
+}
+
+.navigation-blog-details {
+	padding: rem(33) rem(35);
+	background-color: var(--color-light-gray);
+	border: rem(1) solid #ddd;
+	border-radius: var(--border-radius-l);
+
+	margin-bottom: rem(40);
+
+	&__title {
+		color: var(--color-black);
+
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	&__list {
+		display: grid;
+		row-gap: rem(15);
+		margin-left: rem(10);
+	}
+
+	&__link {
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--color-3030);
+
+		@include hover {
+			text-decoration: none;
+		}
+	}
+}
