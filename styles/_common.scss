@@ -161,12 +161,6 @@
 	@include fluid('padding-top', 70, 50);
 	@include fluid('padding-bottom', 150, 25);
 
-	&__title {
-		&:not(:last-child) {
-			margin-bottom: rem(15);
-		}
-	}
-
 	&__blog {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

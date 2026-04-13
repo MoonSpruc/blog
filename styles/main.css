@@ -368,9 +368,6 @@ svg * {
     padding-bottom: 1.5625rem;
   }
 }
-.hero-alt__title:not(:last-child) {
-  margin-bottom: 0.9375rem;
-}
 .hero-alt__blog {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
