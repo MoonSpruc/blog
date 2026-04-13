@@ -16,10 +16,6 @@
 			font-weight: 900;
 			color: var(--color-dark-blue);
 			@include fluid('font-size', 48, 40);
-
-			&:not(:last-child) {
-				margin-bottom: rem(20);
-			}
 		}
 
 		&-text {
@@ -30,7 +26,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: rem(30);
-		@include fluid('column-gap', 80, 20);
+		@include fluid('column-gap', 60, 20);
 
 		@include mobile {
 			grid-template-columns: auto;

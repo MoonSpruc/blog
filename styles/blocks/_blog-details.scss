@@ -9,23 +9,7 @@
 			margin-top: rem(30);
 		}
 
-		&-title {
-			&:not(:last-child) {
-				margin-bottom: rem(20);
-			}
-
-			&-main {
-				&:not(:last-child) {
-					margin-bottom: rem(30);
-				}
-			}
-		}
-
 		&-text {
-			&:not(:last-child) {
-				margin-bottom: rem(40);
-			}
-
 			p {
 				&:not(:last-child) {
 					margin-bottom: rem(20);
@@ -38,21 +22,9 @@
 		margin-top: rem(50);
 
 		&-title {
-			&-big {
-				&:not(:last-child) {
-					margin-bottom: rem(30);
-				}
-			}
-
 			&-small {
 				&:not(:last-child) {
 					margin-bottom: rem(8);
-				}
-
-				a {
-					@include hover {
-						text-decoration: underline;
-					}
 				}
 			}
 		}
@@ -79,16 +51,6 @@
 	background-color: var(--color-light-gray);
 	border: rem(1) solid #ddd;
 	border-radius: var(--border-radius-l);
-
-	margin-bottom: rem(40);
-
-	&__title {
-		color: var(--color-black);
-
-		&:not(:last-child) {
-			margin-bottom: rem(15);
-		}
-	}
 
 	&__list {
 		display: grid;
